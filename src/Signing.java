@@ -9,7 +9,7 @@ public class Signing {
     public BigInteger[] sign(PrivateKey privateKey, PublicKey publicKey,String message){
 
         BigInteger signature[] = new BigInteger[2];
-        BigInteger hash = new BigInteger(hash(message), 16);
+        BigInteger hash = new BigInteger(SHA.SHAHash(message), 16);
 
         BigInteger k;
         do {
@@ -28,7 +28,7 @@ public class Signing {
 
     public boolean verify(BigInteger[] signature, String message, PublicKey publicKey){
 
-        BigInteger hash = new BigInteger(hash(message), 16);
+        BigInteger hash = new BigInteger(SHA.SHAHash(message), 16);
         BigInteger w =  signature[1].modInverse(publicKey.getQ());
         BigInteger u1 = hash.multiply(w).mod(publicKey.getQ());
         BigInteger u2 = (signature[0].multiply(w)).mod(publicKey.getQ());
@@ -41,17 +41,5 @@ public class Signing {
 
         return  t.compareTo(signature[0]) == 0;
 
-    }
-
-
-    private String hash(Object data){
-        try {
-            MessageDigest sha512 = MessageDigest.getInstance("SHA-512");
-            sha512.update(StandardCharsets.UTF_8.encode(data.toString()));
-            return String.format("%032x", new BigInteger(1, sha512.digest())).toUpperCase();
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
-        return null;
     }
 }
