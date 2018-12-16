@@ -1,3 +1,5 @@
+package DSA;
+
 public class SHA {
 
     public static String SHAHash(String str) {
@@ -12,7 +14,7 @@ public class SHA {
         }
 
         blocks[i >> 2] |= 0x80 << (24 - (i % 4) * 8);
-        blocks[blocks.length - 1] = stringBytes.length * 8;
+        blocks[blocks.length - 1] = stringBytes.length * 8; // na końcu długość wiadomości
 
         int[] w = new int[80];
 
