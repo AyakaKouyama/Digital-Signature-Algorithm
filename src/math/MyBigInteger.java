@@ -994,7 +994,6 @@ public class MyBigInteger implements Comparable<MyBigInteger> {
             return this;
         if (n < 0) {
             return shiftRight(-n);
-
         }
 
         int nInts = n >>> 5;
@@ -1310,7 +1309,7 @@ public class MyBigInteger implements Comparable<MyBigInteger> {
         int keep;
 
         for (keep = 0; keep < vlen && val[keep] == 0; keep++)
-            ;
+        ;
         return keep == 0 ? val : java.util.Arrays.copyOfRange(val, keep, vlen);
     }
 

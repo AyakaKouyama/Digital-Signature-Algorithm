@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/DSA/KeyGenerator.java" line="21" mnemonic="8" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2862a4d4-ddda-4413-b050-8c6a556c8fa7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/KeyGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DSA/KeyGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSA/KeyGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DSA/PrivateKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSA/PrivateKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DSA/PublicKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSA/PublicKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DSA/RandomNumberGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSA/RandomNumberGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DSA/Signing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSA/Signing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyBigInteger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PrivateKey.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PublicKey.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SHA.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Signing.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/math/BitSieve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/BitSieve.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/math/MyBigInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/MyBigInteger.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,10 +21,6 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="ErrorTreeViewConfiguration">
-    <option name="hideWarnings" value="true" />
-    <option name="HIDE_WARNINGS" value="true" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="397730306">
@@ -32,24 +32,26 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="19952" />
+          <entry key="java" value="31943" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="19952" />
+          <entry key="JAVA" value="31943" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="gitattributes" value="1" />
           <entry key="iml" value="3" />
-          <entry key="java" value="55" />
+          <entry key="java" value="84" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="3" />
-          <entry key="JAVA" value="55" />
+          <entry key="JAVA" value="84" />
+          <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -60,19 +62,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/math/BitSieve.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="85" column="63" selection-start-line="85" selection-start-column="54" selection-end-line="85" selection-end-column="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/math/MyBigInteger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2710">
-              <caret line="161" column="13" lean-forward="true" selection-start-line="161" selection-start-column="12" selection-end-line="161" selection-end-column="13" />
+            <state relative-caret-position="399">
+              <caret line="1217" column="5" lean-forward="true" selection-start-line="1195" selection-start-column="4" selection-end-line="1217" selection-end-column="5" />
               <folding>
                 <element signature="e#3900#3901#0" expanded="true" />
                 <element signature="e#3949#3950#0" expanded="true" />
@@ -95,29 +88,47 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/math/SignedMutableBigInteger.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/math/MyBigInteger2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="-26">
+              <caret line="158" selection-start-line="158" selection-end-line="158" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#870#871#0" expanded="true" />
+                <element signature="e#931#932#0" expanded="true" />
+                <element signature="e#345#346#0" expanded="true" />
+                <element signature="e#390#391#0" expanded="true" />
+                <element signature="e#1271#1272#0" expanded="true" />
+                <element signature="e#1300#1301#0" expanded="true" />
+                <element signature="e#1340#1341#0" expanded="true" />
+                <element signature="e#1379#1380#0" expanded="true" />
+                <element signature="e#1415#1416#0" expanded="true" />
+                <element signature="e#1450#1451#0" expanded="true" />
+                <element signature="e#5033#5034#0" expanded="true" />
+                <element signature="e#7402#7403#0" expanded="true" />
+                <element signature="e#7452#7453#0" expanded="true" />
+                <element signature="e#8917#8918#0" expanded="true" />
+                <element signature="e#8974#8975#0" expanded="true" />
+                <element signature="e#11323#11324#0" expanded="true" />
+                <element signature="e#11389#11390#0" expanded="true" />
+                <element signature="e#13445#13446#0" expanded="true" />
+                <element signature="e#13485#13486#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DSA/PublicKey.java">
+        <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/math/BigInteger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DSA/PrivateKey.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+            <state relative-caret-position="188">
+              <caret line="677" selection-start-line="677" selection-end-line="677" />
+              <folding>
+                <element signature="e#26899#26900#0" expanded="true" />
+                <element signature="e#44535#44536#0" expanded="true" />
+                <element signature="e#44625#44626#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -125,8 +136,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DSA/KeyGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-510">
-              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+            <state relative-caret-position="209">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
+              <folding>
+                <element signature="e#2316#2317#0" expanded="true" />
+                <element signature="e#2348#2349#0" expanded="true" />
+                <element signature="e#2388#2389#0" expanded="true" />
+                <element signature="e#2421#2422#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -134,21 +151,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DSA/Signing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="188">
               <caret line="20" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DSA/SHA.java">
+        <entry file="file://$PROJECT_DIR$/src/math/BitSieve.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
-              <folding>
-                <element signature="e#2924#2925#0" expanded="true" />
-                <element signature="e#2992#2993#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="209">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DSA/PrivateKey.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DSA/PublicKey.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -157,26 +188,16 @@
         <entry file="file://$PROJECT_DIR$/src/DSA/RandomNumberGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="612">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/math/MutableBigInteger.java">
+        <entry file="file://$PROJECT_DIR$/src/DSA/SHA.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17306">
-              <caret line="1022" selection-start-line="1022" selection-end-line="1022" selection-end-column="24" />
-              <folding>
-                <element signature="e#3186#3187#0" expanded="true" />
-                <element signature="e#3246#3247#0" expanded="true" />
-                <element signature="e#3270#3271#0" expanded="true" />
-                <element signature="e#3306#3307#0" expanded="true" />
-                <element signature="e#3330#3331#0" expanded="true" />
-                <element signature="e#3409#3410#0" expanded="true" />
-                <element signature="e#3329#3330#0" expanded="true" />
-                <element signature="e#3410#3411#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-1083">
+              <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -192,14 +213,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>encodeBase64</find>
-      <find>rol</find>
+      <find>length</find>
+      <find>bitlen</find>
+      <find>bitLen</find>
+      <find>bitLengthForInt</find>
+      <find>shiftle</find>
       <find>compareTo</find>
-      <find>randomBits</find>
-      <find>SMALL_PRIME_THRESHO</find>
-      <find>BigInteger</find>
-      <find>random</find>
-      <find>Random</find>
+      <find>isP</find>
+      <find>prime</find>
+      <find>si</find>
+      <find>probableP</find>
+      <find>bigIn</find>
+      <find>ONE</find>
+      <find>and</find>
+      <find>tw</find>
+      <find>trustedStripLeadingZeroInt</find>
+      <find>stripLeadingZeroBytes</find>
+      <find>modIn</find>
+      <find>modPow</find>
+      <find>sum</find>
+      <find>Sy</find>
+      <find>mu</find>
+      <find>shif</find>
+      <find>modPo</find>
+      <find>modp</find>
+      <find>sub</find>
+      <find>divide</find>
+      <find>primeTo</find>
+      <find>passesMillerRabin</find>
+      <find>equals</find>
+      <find>add</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -228,16 +271,17 @@
         <option value="$PROJECT_DIR$/src/DSA/Main.java" />
         <option value="$PROJECT_DIR$/src/math/BigInteger.java" />
         <option value="$PROJECT_DIR$/src/math/SignedMutableBigInteger.java" />
-        <option value="$PROJECT_DIR$/src/DSA/PrivateKey.java" />
-        <option value="$PROJECT_DIR$/src/DSA/PublicKey.java" />
-        <option value="$PROJECT_DIR$/src/math/MutableBigInteger.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/DSA/Signing.java" />
         <option value="$PROJECT_DIR$/src/DSA/SHA.java" />
-        <option value="$PROJECT_DIR$/src/DSA/KeyGenerator.java" />
-        <option value="$PROJECT_DIR$/src/DSA/RandomNumberGenerator.java" />
+        <option value="$PROJECT_DIR$/src/math/MutableBigInteger.java" />
         <option value="$PROJECT_DIR$/src/math/BitSieve.java" />
         <option value="$PROJECT_DIR$/src/math/MyBigInteger.java" />
+        <option value="$PROJECT_DIR$/src/DSA/RandomNumberGenerator.java" />
+        <option value="$PROJECT_DIR$/src/DSA/PublicKey.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/DSA/KeyGenerator.java" />
+        <option value="$PROJECT_DIR$/src/DSA/PrivateKey.java" />
+        <option value="$PROJECT_DIR$/src/DSA/Signing.java" />
+        <option value="$PROJECT_DIR$/src/math/MyBigInteger2.java" />
       </list>
     </option>
   </component>
@@ -253,9 +297,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="264" />
-    <option name="width" value="1664" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="706" />
+    <option name="width" value="1221" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -364,6 +408,12 @@
               <item name="zadanie 3" type="b2602c69:ProjectViewProjectNode" />
               <item name="zadanie 3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="DSA" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zadanie 3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zadanie 3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="math" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -375,7 +425,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544984591834" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545132314266" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
@@ -418,32 +468,32 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1544637274545</updated>
-      <workItem from="1544637279058" duration="89395000" />
+      <workItem from="1544637279058" duration="138784000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89395000" />
+    <option name="totallyTimeSpent" value="138784000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" sideWeight="0.50162864" side_tool="true" visible="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49837133" visible="true" weight="0.25" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" sideWeight="0.49840087" weight="0.3275488" />
+      <window_info id="Image Layers" order="0" />
+      <window_info id="Designer" order="1" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info content_ui="combo" id="Project" order="4" sideWeight="0.7947883" visible="true" weight="0.25586355" />
+      <window_info id="Favorites" order="5" sideWeight="0.20521173" side_tool="true" visible="true" weight="0.25586355" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" sideWeight="0.4968017" weight="0.3275488" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" sideWeight="0.5021322" side_tool="true" weight="0.3340564" />
+      <window_info anchor="bottom" id="Event Log" sideWeight="0.50479746" side_tool="true" weight="0.3340564" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4978678" visible="true" weight="0.3340564" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49520257" visible="true" weight="0.3340564" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -484,17 +534,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="2210" selection-start-line="2210" selection-end-line="2210" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/math/BigInteger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="3199" selection-start-line="3199" selection-end-line="3199" />
-          <folding>
-            <element signature="e#44535#44536#0" expanded="true" />
-            <element signature="e#44625#44626#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -696,13 +735,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/math/packageInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -762,19 +794,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/io/PrintStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="896" selection-start-line="896" selection-end-line="896" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitattributes">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/math/packageInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/math/MutableBigInteger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17306">
-          <caret line="1022" selection-start-line="1022" selection-end-line="1022" selection-end-column="24" />
+        <state relative-caret-position="331">
+          <caret line="582" selection-start-line="582" selection-end-line="689" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="3318" selection-start-line="3318" selection-end-line="3318" />
           <folding>
-            <element signature="e#3186#3187#0" expanded="true" />
-            <element signature="e#3246#3247#0" expanded="true" />
-            <element signature="e#3270#3271#0" expanded="true" />
-            <element signature="e#3306#3307#0" expanded="true" />
-            <element signature="e#3330#3331#0" expanded="true" />
-            <element signature="e#3409#3410#0" expanded="true" />
-            <element signature="e#3329#3330#0" expanded="true" />
-            <element signature="e#3410#3411#0" expanded="true" />
+            <element signature="e#118039#118040#0" expanded="true" />
+            <element signature="e#118101#118102#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -788,71 +838,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="103" selection-start-line="22" selection-start-column="103" selection-end-line="22" selection-end-column="103" />
+        <state relative-caret-position="408">
+          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DSA/SHA.java">
+    <entry file="file://$PROJECT_DIR$/src/DSA/KeyGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
+        <state relative-caret-position="209">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
           <folding>
-            <element signature="e#2924#2925#0" expanded="true" />
-            <element signature="e#2992#2993#0" expanded="true" />
+            <element signature="e#2316#2317#0" expanded="true" />
+            <element signature="e#2348#2349#0" expanded="true" />
+            <element signature="e#2388#2389#0" expanded="true" />
+            <element signature="e#2421#2422#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DSA/Signing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DSA/PrivateKey.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DSA/PublicKey.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        <state relative-caret-position="187">
+          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DSA/RandomNumberGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DSA/KeyGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/DSA/SHA.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        <state relative-caret-position="-1083">
+          <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/math/BitSieve.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="85" column="63" selection-start-line="85" selection-start-column="54" selection-end-line="85" selection-end-column="63" />
+        <state relative-caret-position="209">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/math/MyBigInteger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2710">
-          <caret line="161" column="13" lean-forward="true" selection-start-line="161" selection-start-column="12" selection-end-line="161" selection-end-column="13" />
+        <state relative-caret-position="399">
+          <caret line="1217" column="5" lean-forward="true" selection-start-line="1195" selection-start-column="4" selection-end-line="1217" selection-end-column="5" />
           <folding>
             <element signature="e#3900#3901#0" expanded="true" />
             <element signature="e#3949#3950#0" expanded="true" />
@@ -870,6 +915,54 @@
             <element signature="e#41247#41248#0" expanded="true" />
             <element signature="e#41276#41277#0" expanded="true" />
             <element signature="e#41318#41319#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/math/BigInteger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="677" selection-start-line="677" selection-end-line="677" />
+          <folding>
+            <element signature="e#26899#26900#0" expanded="true" />
+            <element signature="e#44535#44536#0" expanded="true" />
+            <element signature="e#44625#44626#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DSA/Signing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/math/MyBigInteger2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-26">
+          <caret line="158" selection-start-line="158" selection-end-line="158" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#870#871#0" expanded="true" />
+            <element signature="e#931#932#0" expanded="true" />
+            <element signature="e#345#346#0" expanded="true" />
+            <element signature="e#390#391#0" expanded="true" />
+            <element signature="e#1271#1272#0" expanded="true" />
+            <element signature="e#1300#1301#0" expanded="true" />
+            <element signature="e#1340#1341#0" expanded="true" />
+            <element signature="e#1379#1380#0" expanded="true" />
+            <element signature="e#1415#1416#0" expanded="true" />
+            <element signature="e#1450#1451#0" expanded="true" />
+            <element signature="e#5033#5034#0" expanded="true" />
+            <element signature="e#7402#7403#0" expanded="true" />
+            <element signature="e#7452#7453#0" expanded="true" />
+            <element signature="e#8917#8918#0" expanded="true" />
+            <element signature="e#8974#8975#0" expanded="true" />
+            <element signature="e#11323#11324#0" expanded="true" />
+            <element signature="e#11389#11390#0" expanded="true" />
+            <element signature="e#13445#13446#0" expanded="true" />
+            <element signature="e#13485#13486#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -20,6 +20,7 @@ class BitSieve {
             nextIndex = sieveSearch(length, nextIndex + 1);
             nextPrime = 2*nextIndex + 1;
         } while((nextIndex > 0) && (nextPrime < length));
+
     }
 
     BitSieve(MyBigInteger base, int searchLen) {

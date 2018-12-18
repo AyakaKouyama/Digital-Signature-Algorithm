@@ -1,5 +1,5 @@
 package DSA;
-import math.MyBigInteger;
+import math.MyBigInteger2;
 
 public class KeyGenerator {
 
@@ -14,52 +14,50 @@ public class KeyGenerator {
         return privateKey;
     }
 
-    public MyBigInteger generateG(MyBigInteger p, MyBigInteger q){
-        MyBigInteger h = MyBigInteger.ONE.shiftLeft(159);
-        MyBigInteger exp = p.subtract(MyBigInteger.valueOf(1)).divide(q);
+    public MyBigInteger2 generateG(MyBigInteger2 p, MyBigInteger2 q){
+        MyBigInteger2 h = MyBigInteger2.ONE.shiftLeft(159);
+        MyBigInteger2 exp = p.subtract(MyBigInteger2.ONE).divide(q);
         do {
-            h = h.add(MyBigInteger.valueOf(1));
-        }while(h.modPow(exp, p).compareTo(MyBigInteger.valueOf(1)) <= 0 || h.modPow(exp, p).bitLength() != 1024);
-
+            h = h.add(MyBigInteger2.ONE);
+        }while(h.modPow(exp, p).compareTo(MyBigInteger2.ONE) <= 0);
         return  h.modPow(exp, p);
 
     }
 
-    public MyBigInteger[] generatePAndQ(){
+    public MyBigInteger2[] generatePAndQ(){
 
         RandomNumberGenerator random = new RandomNumberGenerator(System.currentTimeMillis());
 
         final int pSizeInBits = 1024;
         final int qSizeInBits = 160;
-        MyBigInteger q = MyBigInteger.probablePrime(qSizeInBits, random);
-        MyBigInteger k = MyBigInteger.ONE.shiftLeft(pSizeInBits - qSizeInBits); // k = 2**(pSizeInBits - qSizeInBits);
+        MyBigInteger2 q = MyBigInteger2.ONE;
+        q = q.probablePrime(qSizeInBits, random);
+        MyBigInteger2 k = MyBigInteger2.ONE.shiftLeft(pSizeInBits - qSizeInBits); // k = 2**(pSizeInBits - qSizeInBits);
 
-        MyBigInteger probablyPrime = q.multiply(k).add(MyBigInteger.ONE); // probablyPrime = q * k + 1
-        while (!probablyPrime.isProbablePrime(50)) {
-            q = MyBigInteger.probablePrime(qSizeInBits, random);
-            probablyPrime = q.multiply(k).add(MyBigInteger.ONE);
+        MyBigInteger2 probablyPrime = q.multiply(k).add(MyBigInteger2.ONE); // probablyPrime = q * k + 1
+        while (!probablyPrime.isProbablePrime(4)) {
+            q = q.probablePrime(qSizeInBits, random);
+            probablyPrime = q.multiply(k).add(MyBigInteger2.ONE);
         }
 
-        MyBigInteger[] qAndP = new MyBigInteger[2];
+        MyBigInteger2[] qAndP = new MyBigInteger2[2];
         qAndP[0] = q;
         qAndP[1] = probablyPrime;
 
         return qAndP;
     }
 
-
     public void generateKey() {
 
-        MyBigInteger a = new MyBigInteger(160, new RandomNumberGenerator(System.currentTimeMillis()));
-        MyBigInteger qAndp[] = generatePAndQ();
-        MyBigInteger p = qAndp[1];
-        MyBigInteger q = qAndp[0];
-        MyBigInteger g = generateG(p, q);
-        MyBigInteger b = g.modPow(a, p);
+        MyBigInteger2 a = new  MyBigInteger2(160, new RandomNumberGenerator(System.currentTimeMillis()));
+        MyBigInteger2 qAndp[] = generatePAndQ();
+        MyBigInteger2 p = qAndp[1];
+        MyBigInteger2 q = qAndp[0];
+        MyBigInteger2 g = generateG(p, q);
+        MyBigInteger2 b = g.modPow(a, p);
 
         publicKey = new PublicKey(b, g, p, q);
         privateKey = new PrivateKey(a);
     }
 
 }
-

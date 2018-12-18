@@ -32,7 +32,7 @@ public class RandomNumberGenerator {
         for (int i = 0; i < bytes.length; )
             for (int rnd = random(), n = Math.min(bytes.length - i, 4);
                  n-- > 0; rnd >>= 8)
-                bytes[i++] = (byte) rnd;
+                bytes[i++] = (byte) Math.abs(rnd);
     }
 
 }
