@@ -1,44 +1,44 @@
 package DSA;
-import math.MyBigInteger2;
+import math.MyBigInteger;
 
 public class PublicKey {
 
-    private MyBigInteger2 b;
-    private MyBigInteger2 g;
-    private MyBigInteger2 p;
-    private MyBigInteger2 q;
+    private MyBigInteger b;
+    private MyBigInteger g;
+    private MyBigInteger p;
+    private MyBigInteger q;
 
-    public PublicKey(MyBigInteger2 b, MyBigInteger2 g, MyBigInteger2 p, MyBigInteger2 q){
+    public PublicKey(MyBigInteger b, MyBigInteger g, MyBigInteger p, MyBigInteger q){
         this.b = b;
         this.g = g;
         this.p = p;
         this.q = q;
     }
 
-    public void setB(MyBigInteger2 b){
+    public void setB(MyBigInteger b){
         this.b = b;
     }
 
-    public void setG(MyBigInteger2 g){
+    public void setG(MyBigInteger g){
         this.g = g;
     }
 
-    public void setP(MyBigInteger2 p){
+    public void setP(MyBigInteger p){
         this.p = p;
     }
 
-    public  void setQ(MyBigInteger2 q){ this. q = q;}
+    public  void setQ(MyBigInteger q){ this. q = q;}
 
-    public MyBigInteger2 getB(){
+    public MyBigInteger getB(){
         return b;
     }
 
-    public MyBigInteger2 getG(){
+    public MyBigInteger getG(){
         return g;
     }
 
-    public MyBigInteger2 getP(){
+    public MyBigInteger getP(){
         return p;
     }
-    public MyBigInteger2 getQ() { return q;}
+    public MyBigInteger getQ() { return q;}
 }

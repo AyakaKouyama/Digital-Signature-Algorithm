@@ -1,9 +1,5 @@
 import DSA.*;
 import math.MyBigInteger;
-import math.MyBigInteger2;
-
-import java.math.BigInteger;
-import java.util.Random;
 
 public class Main {
 
@@ -17,7 +13,7 @@ public class Main {
         Signing s = new Signing();
 
         System.out.println("Signing...");
-        MyBigInteger2 signature[] = s.sign(kg.getPrivateKey(), kg.getPublicKey(), "ala ma kota");
+        MyBigInteger signature[] = s.sign(kg.getPrivateKey(), kg.getPublicKey(), "ala ma kota");
         System.out.println("Signed.");
 
         System.out.println("Verifying...");

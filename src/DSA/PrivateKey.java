@@ -1,19 +1,19 @@
 package DSA;
-import math.MyBigInteger2;
+import math.MyBigInteger;
 
 public class PrivateKey {
 
-    private MyBigInteger2 a;
+    private MyBigInteger a;
 
-    public PrivateKey(MyBigInteger2 a){
+    public PrivateKey(MyBigInteger a){
         this.a = a;
 
     }
-    public void setA(MyBigInteger2 a){
+    public void setA(MyBigInteger a){
         this.a = a;
     }
 
-    public MyBigInteger2 getA(){
+    public MyBigInteger getA(){
         return a;
     }
 
