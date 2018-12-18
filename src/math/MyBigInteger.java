@@ -1,6 +1,7 @@
 package math;
 
 import DSA.RandomNumberGenerator;
+
 import java.math.BigInteger;
 import java.util.Random;
 
@@ -23,6 +24,7 @@ public class MyBigInteger implements Comparable<MyBigInteger> {
     public MyBigInteger(String value, int radix) {
         this(new BigInteger(value, radix).toString());
     }
+
 
     private byte[] fillByteArray(int numBits, RandomNumberGenerator random) {
 
@@ -157,50 +159,52 @@ public class MyBigInteger implements Comparable<MyBigInteger> {
     }
 
     public MyBigInteger multiply(MyBigInteger number) {
-        return new MyBigInteger(new BigInteger(this.toString()).multiply(new BigInteger(number.toString())).toString());
-       /* int n1 = length;
-        int n2 = number.length;
-        int[] result;
-        if(number.length == this.length){
-            result = new int[length * number.length + 1];
-            return new MyBigInteger2((new BigInteger(toString()).multiply(new BigInteger(number.toString()))).toString());
-        }
-        else if(number.length > this.length){
-            return number.multiply(this);
-        }
-        else
-        {
-            result = new int[length * number.length];
+        if (number.compareTo(MyBigInteger.ZERO) == 0) {
+            return new MyBigInteger(new BigInteger(this.toString()).multiply(new BigInteger(number.toString())).toString());
+        } else if(number.equals(MyBigInteger.valueOf("-1"))){
+            int n1 = length;
+            int n2 = number.length;
+            int[] result;
+            if (number.length == this.length) {
+                result = new int[length * number.length + 1];
+                return new MyBigInteger((new BigInteger(toString()).multiply(new BigInteger(number.toString()))).toString());
+            } else if (number.length > this.length) {
+                return number.multiply(this);
+            } else {
+                result = new int[length * number.length];
 
-        int i_n1 = 0;
-        int i_n2 = 0;
+                int i_n1 = 0;
+                int i_n2 = 0;
 
-        for (int i = n1 - 1; i >= 0; i--) {
+                for (int i = n1 - 1; i >= 0; i--) {
 
-            int carry = 0;
-            int n11 = digits[i];
-            i_n2 = 0;
+                    int carry = 0;
+                    int n11 = digits[i];
+                    i_n2 = 0;
 
-            for (int j = n2 - 1; j >= 0; j--) {
-                int n22 = number.digits[j];
-                int sum = n11 * n22 + result[i_n1 + i_n2] + carry;
-                carry = sum / 10;
-                result[i_n1 + i_n2] = sum % 10;
+                    for (int j = n2 - 1; j >= 0; j--) {
+                        int n22 = number.digits[j];
+                        int sum = n11 * n22 + result[i_n1 + i_n2] + carry;
+                        carry = sum / 10;
+                        result[i_n1 + i_n2] = sum % 10;
 
-                i_n2++;
+                        i_n2++;
+                    }
+                    if (carry > 0)
+                        result[i_n1 + i_n2] += carry;
+                    i_n1++;
+                }
+
+                for (int i = 0; i < length * number.length / 2; i++) {
+                    int temp = result[i];
+                    result[i] = result[result.length - i - 1];
+                    result[result.length - i - 1] = temp;
+                }
+
+                return new MyBigInteger(result);
             }
-            if (carry > 0)
-                result[i_n1 + i_n2] += carry;
-            i_n1++;
         }
-
-        for (int i = 0; i < length * number.length / 2; i++) {
-            int temp = result[i];
-            result[i] = result[result.length - i - 1];
-            result[result.length - i - 1] = temp;
-        }
-
-        return new MyBigInteger2(result);} */
+        return new MyBigInteger(new BigInteger(this.toString()).multiply(new BigInteger(number.toString())).toString());
     }
 
     public MyBigInteger subtract(MyBigInteger number) {
@@ -240,8 +244,8 @@ public class MyBigInteger implements Comparable<MyBigInteger> {
     }
 
     public MyBigInteger modPow(MyBigInteger number, MyBigInteger modulo) {
-        // return new MyBigInteger2(new BigInteger(this.toString()).modPow(new BigInteger(number.toString()), new BigInteger(modulo.toString())).toString());
         return modPowTwoNumbers(new BigInteger(toString()), new BigInteger(number.toString()), new BigInteger(modulo.toString()));
+        //return  modPowTwoNumbers(this, number, modulo);
     }
 
     private MyBigInteger modPowTwoNumbers(BigInteger x, BigInteger y, BigInteger p) {
@@ -249,7 +253,7 @@ public class MyBigInteger implements Comparable<MyBigInteger> {
         x = x.mod(p);
 
         while (y.compareTo(BigInteger.ZERO) > 0) {
-            if (y.and(BigInteger.ONE).compareTo(BigInteger.ONE) == 0) {
+            if (y.mod(BigInteger.TWO).compareTo(BigInteger.ONE) == 0) {
                 res = (res.multiply(x).mod(p));
             }
             y = y.shiftRight(1);
@@ -263,6 +267,9 @@ public class MyBigInteger implements Comparable<MyBigInteger> {
     }
 
     private MyBigInteger modInverseTwoNumbers(MyBigInteger a, MyBigInteger m) {
+        if (a.gcd(m).compareTo(MyBigInteger.ONE) != 0) {
+            throw new ArithmeticException("Inversion doesn't exist");
+        }
         BigInteger m0 = new BigInteger(m.toString());
         BigInteger m1 = new BigInteger(m.toString());
         BigInteger a1 = new BigInteger(a.toString());
@@ -297,6 +304,7 @@ public class MyBigInteger implements Comparable<MyBigInteger> {
             return false;
         if (n.compareTo(BigInteger.valueOf(3)) < 0)
             return true;
+
         int s = 0;
         BigInteger d = n.subtract(BigInteger.ONE);
         while (d.mod(BigInteger.TWO).equals(BigInteger.ZERO)) {
@@ -323,7 +331,7 @@ public class MyBigInteger implements Comparable<MyBigInteger> {
         return true;
     }
 
-    private BigInteger uniformRandom(BigInteger bottom, BigInteger top) {
+    private BigInteger uniformRandom(BigInteger bottom, BigInteger top) {  // losowa liczba z zakresu (bottom, top)
         Random random = new Random();
         BigInteger res;
 
@@ -331,14 +339,6 @@ public class MyBigInteger implements Comparable<MyBigInteger> {
             res = new BigInteger(top.bitLength(), random);
         } while (res.compareTo(bottom) < 0 || res.compareTo(top) > 0);
         return res;
-    }
-
-    public int bitLength() {
-        return new BigInteger(this.toString()).bitLength();
-    }
-
-    public MyBigInteger shiftLeft(int n) {
-        return new MyBigInteger(new BigInteger(this.toString()).shiftLeft(n).toString());
     }
 
     public MyBigInteger probablePrime(int bitLength, RandomNumberGenerator randomNumberGenerator) {
@@ -354,6 +354,74 @@ public class MyBigInteger implements Comparable<MyBigInteger> {
 
         return new MyBigInteger(prime.toString());
     }
+    public int bitLength() {
+        return new BigInteger(this.toString()).bitLength();
+    }
+
+    public MyBigInteger and(MyBigInteger val) {
+        int[] result = new int[Math.max(length, val.length)];
+        for (int i = 0; i < result.length; i++)
+            result[i] = digits[result.length - i - 1] & val.digits[result.length - i - 1];
+        return new MyBigInteger(result);
+    }
+
+    public MyBigInteger shiftLeft(int n) {
+        int a[] = digits;
+        int len = length;
+        int nInts = n >>> 5;
+        int nBits = n & 0x1F;
+        int bitsInHighWord = 32 - Integer.numberOfLeadingZeros(a[0]);
+
+        // If shift can be done without recopy, do so
+        if (n <= (32 - bitsInHighWord)) {
+            primitiveLeftShift(a, len, nBits);
+            return new MyBigInteger(new BigInteger(this.toString()).shiftLeft(n).toString());
+        } else { // Array must be resized
+            if (nBits <= (32 - bitsInHighWord)) {
+                int result[] = new int[nInts + len];
+                System.arraycopy(a, 0, result, 0, len);
+                primitiveLeftShift(result, result.length, nBits);
+                return new MyBigInteger(new BigInteger(this.toString()).shiftLeft(n).toString());
+            } else {
+                int result[] = new int[nInts + len + 1];
+                System.arraycopy(a, 0, result, 0, len);
+                primitiveRightShift(result, result.length, 32 - nBits);
+                return new MyBigInteger(new BigInteger(this.toString()).shiftLeft(n).toString());
+            }
+        }
+
+    }
+
+    public MyBigInteger shiftRight(int n){
+        BigInteger shifted = new BigInteger(this.toString());
+        shifted = shifted.shiftRight(n);
+        return new MyBigInteger(shifted.toString());
+    }
+
+    static void primitiveRightShift(int[] a, int len, int n) {
+        int n2 = 32 - n;
+        for (int i = len - 1, c = a[i]; i > 0; i--) {
+            int b = c;
+            c = a[i - 1];
+            a[i] = (c << n2) | (b >>> n);
+        }
+        a[0] >>>= n;
+    }
+
+    // shifts a up to len left n bits assumes no leading zeros, 0<=n<32
+    static void primitiveLeftShift(int[] a, int len, int n) {
+        if (len == 0 || n == 0)
+            return;
+
+        int n2 = 32 - n;
+        for (int i = 0, c = a[i], m = i + len - 1; i < m; i++) {
+            int b = c;
+            c = a[i + 1];
+            a[i] = (b << n) | (c >>> n2);
+        }
+        a[len - 1] <<= n;
+    }
+
 
 
     public int findBeginning() {
